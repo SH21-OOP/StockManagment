@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using StockManagment.DataExchange;
+using StockManagment.StockManagment.Logic;
+using System;
 using System.Windows.Forms;
 
-namespace StockManagment
+namespace StockManagment.StockManagment
 {
     static class Program
     {
@@ -16,7 +15,10 @@ namespace StockManagment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form());
+            AppFields appFields = new AppFields();
+            Form window = new Form(appFields);
+            StockManager logic = new StockManager(appFields);
+            Application.Run(window);
         }
     }
 }
