@@ -46,15 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form.cs">
+    <Compile Include="UI\Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form.Designer.cs">
+    <Compile Include="UI\Form.Designer.cs">
       <DependentUpon>Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form.resx">
+    <EmbeddedResource Include="UI\Form.resx">
       <DependentUpon>Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -78,6 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="StockManagment\Containers\" />
+    <Folder Include="StockManagment\Logic\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
